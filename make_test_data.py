@@ -5,12 +5,16 @@ random.seed(777)
 np.random.seed(777)
 
 cmd_count = 4
-cmd_ratio = 0.05 / cmd_count # 5% 비율로 명령어 실시 가정
+cmd_ratio = 0.10 / cmd_count # 10% 비율로 명령어 실시 가정
 no_cmd_ratio = 1.0 - cmd_ratio
 
-cmd_loc = 0.5
-cmd_scale = 0.5
-no_cmd_loc = 0.1
+# env1 : 0.3 0.1 0.0 0.1 # 인식률이 저조한 상황
+# env2 : 0.5 0.1 0.1 0.1 # 인식률이 적당한 상황
+# env3 : 0.7 0.1 0.2 0.1 # 인식률이 좋은 상황
+
+cmd_loc = 0.7
+cmd_scale = 0.1
+no_cmd_loc = 0.2
 no_cmd_scale = 0.1
 
 total_count = 1000
